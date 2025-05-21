@@ -7,7 +7,7 @@ class CategoryTestCase(TestCase):
 
     def test_category_creation(self):
         self.assertEqual(self.category.name, "Desserts")
-        self.assertIsInstance(iter(self.category), str)
+        self.assertEqual(list(self.category), list("Desserts"))  # Перевіряємо, що ітератор повертає символи рядка
 
 class RecipeTestCase(TestCase):
     def setUp(self):
